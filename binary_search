@@ -26,5 +26,18 @@ int binarySearch(double searchKey, int *arr) //binary search sorted array
 
     while(true) // perform loop until return statement
     {
+       currentIndex = (lowerBound + upperBound) / 2; // check middle value
+       
+       if(arr[currentIndex] == searchKey) // if searchKey found
+            return currentIndex;          // return index
+       else if (lowerBound > upperBound)  // gone beyond bounds of array
+            return numElem;               // returns number of elements
+       else                               // searchKey not found, still in bounds
+       {
+            if(searchKey < arr[currentIndex])
+                upperBound = currentIndex - 1; // set new upperBound
+            if(searchKey > arr[currentIndex])
+                lowerBound = currentIndex + 1; // set new lowerBound
+       }
     }
 }
