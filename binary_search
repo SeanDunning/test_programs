@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int binarySearch(double, int*);
+
+int main()
+{
+   int arr[10000]; // arbitrary array size
+
+   for (int i = 0; i < 10000; i++) // Assign values in order
+      arr[i] = i;
+
+   cout << binarySearch(1333, arr); // Call binary search
+
+ return 0;
+}
+
+int binarySearch(double searchKey, int *arr) //binary search sorted array
+{
+    int numElem = 10000;
+    int upperBound = numElem - 1; // upper bound of array
+    int lowerBound = 0;           // lower bound of array
+    int currentIndex;             // index of array being checked
+
+
+    while(true) // perform loop until return statement
+    {
+    }
+}
